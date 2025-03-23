@@ -1,12 +1,45 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
-  color: #444;
+* {
+  /* border-top: 10px solid #1098ad; lowest priority, but applies to all the elements*/
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad; /* this property does not get inheritted */
+} /* it is past down to all the childs, if they have an id or class it will take that style  */
+
+.main-header {
+  background-color: #f7f7f7;
+  /*  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px; /* 20 --> up, down, 40 --> left, right  */
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+.post-header {
+  margin-bottom: 40px;
+}
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /*  padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px, 0;
+  width: 500px;
+}
+
 h1,
 h2,
 h3 {
@@ -21,10 +54,12 @@ h1 {
 
 h2 {
   font-size: 40 px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 h4 {
@@ -36,10 +71,21 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 15px;
 }
 
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
 li {
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 /*footer p {
@@ -70,16 +116,6 @@ li {
   list-style: none;
 }
 
-.main-header {
-  background-color: #f7f7f7;
-}
-
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
-}
-
 body {
   /*background-color: orangered;*/
 }
@@ -95,7 +131,7 @@ li:first-child {
 li:last-child {
   font-style: italic;
 }
-
+/* This is just to try: */
 /* li:nth-child(2) {
   color: red;
 }
@@ -105,4 +141,58 @@ li:nth-child(odd) {
 
 /* article p:last-child {
   color: red;
+} */
+
+/* Styling links */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+/* quan vas a sobre dels links amb el ratoli:  */
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted orange;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* sempre ho fem amb el mateix ordre LVHA  */
+.post-img {
+  /* width: 800px;
+   */
+  width: 100%;
+  height: auto;
+}
+
+/* Resolving conflicts (what applies first) */
+/* #copyright {
+  color: red;
+} higher priority
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}  if two classes that is the second priority, then te last one applied
+
+footer p {
+  color: green !important;
+}  important to say that is the one 
+ */
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
 } */
