@@ -17,7 +17,7 @@
     <div><\div> no meaning elements. 
     -->
     <div class="container">
-      <header class="main-header">
+      <header class="main-header clearfix">
         <h1>📘 The Code Magazine</h1>
         <nav>
           <!-- <strong>This is the navigation</strong> -->
@@ -26,6 +26,7 @@
           <a href="#">Flexbox</a>
           <a href="#">CSS Grid</a>
         </nav>
+        <!-- <div class="clear"></div> -->
       </header>
       <article>
         <header class="post-header">
@@ -35,8 +36,9 @@
             alt="Laura Jones"
             widht="50"
             height="50"
+            class="author-img"
           />
-          <p id="author">
+          <p id="author" class="author">
             Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
           </p>
           <img
