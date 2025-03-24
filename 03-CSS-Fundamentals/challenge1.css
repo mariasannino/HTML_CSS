@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.4;
@@ -8,6 +13,9 @@ body {
   border-bottom: 5px solid black;
   border-left: 5px solid black;
   border-right: 5px solid black;
+  width: 825px;
+  margin: 50px auto;
+  position: relative;
 }
 
 .product-title {
@@ -15,6 +23,38 @@ body {
   text-transform: uppercase;
   text-align: center;
   background-color: #f7f7f7;
+  padding: 15px;
+}
+
+.sale {
+  background-color: #ec2f2f;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 7px 15px;
+  display: inline-block;
+  position: absolute;
+  top: -17px;
+  left: -38px;
+  letter-spacing: 2px;
+}
+/* .product-title::after {
+  content: "SALE";
+  background-color: red;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: 40px;
+  left: 120px;
+  letter-spacing: 1px;
+} */
+.image {
+  width: 25%;
+  height: auto;
 }
 
 .price {
@@ -26,11 +66,14 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: #777;
+  margin-bottom: 20px;
 }
 
 .more-info:link,
 more-info:visited {
   color: black;
+  margin-bottom: 30px;
+  display: inline-block;
 }
 
 .more-info:hover,
@@ -38,12 +81,44 @@ more-info:active {
   text-decoration: none;
 }
 
-.details-title {
-  text-transform: uppercase;
+.color {
+  background-color: #000;
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.details-list {
+.color-blue {
+  background-color: #2f6ee2;
+}
+
+.color-red {
+  background-color: #ec2f2f;
+}
+.color-yellow {
+  background-color: #f0bf1e;
+}
+.color-green {
+  background-color: #90cc20;
+}
+.color-brown {
+  background-color: #885214;
+}
+.details-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+
+.list {
   list-style: square;
+  margin-left: 50px;
+}
+
+.list li {
+  margin-bottom: 10px;
 }
 
 .add-cart {
@@ -53,6 +128,9 @@ more-info:active {
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border-top: 4px solid black;
 }
 
 .add-cart:hover {
