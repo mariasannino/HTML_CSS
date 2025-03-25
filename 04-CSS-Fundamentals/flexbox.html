@@ -43,13 +43,24 @@
         display: flex;
         align-items: center; /* vertical alignment */
         justify-content: flex-start; /* horizontal alignment */
-        gap: 30px;
+        gap: 10px;
       }
-      /* .el {
-        margin-right: 30px;
-      } */
+      .el {
+        /* margin-right: 30px;*/
+        /*
+        DEFAULTS:
+        flex-grow: 0;
+        flex-shrink: 1; to fit the content in a size although another defined.
+        flex-basis: auto;  */
+        /*flex-basis: 400px;
+        flex-shrink: 0;  so allow to shrink elements or not */
+        /*  flex-grow: 1; grow elements to fit all the space aming all the elements */
+        /* flex: 0 0 200px;  flex grow, flex shrink, flex basis all together */
+        flex: 1;
+      }
       .el--1 {
         align-self: flex-start;
+        flex-grow: 2; /* gets double of the space */
       }
 
       .el--5 {
